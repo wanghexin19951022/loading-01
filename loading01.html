@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>loading动画</title>
+</head>
+<body>
+  <div class="spinner">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <script>
+    const light = async ()=> {
+      let r1 = await new Promise((res, rej) => {
+        setTimeout(() => {
+          console.log('红')
+          res('1')
+        }, 5000)
+      })
+      let r2 = await new Promise((res, rej) => {
+        setTimeout(() => {
+          console.log('绿')
+          res('2')
+        }, 3000)
+      })
+      let r3 = await new Promise((res, rej) => {
+        setTimeout(() => {
+          console.log('黄')
+          res('3')
+        }, 1000)
+      })
+    }
+    
+
+  </script>
+</body>
+</html>
